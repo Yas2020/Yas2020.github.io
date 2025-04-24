@@ -6,14 +6,14 @@
 -->
 <html>
 	<head>
-		<title>Prologue by Yas</title>
+		<title>Yas Profile</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!-- <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript> -->
 	</head>
 	<body class="is-preload">
-
+		<audio id="pop-sound" src="assets/sounds/bubble-pop.mp3" preload="auto"></audio>
 
 		<!-- Header -->
 			<div id="header">
@@ -60,7 +60,6 @@
 				<!-- Intro -->
 					<section id="top" class="one">
 						<div class="container">
-
 							<div class="header">
 
 								<div class="logo">
@@ -80,13 +79,11 @@
 								</footer>
 
 							</div>
-
 							<!-- Footer -->
 							<footer id="footerDate">
 								<!-- <p class="copyright">&copy; @Copyright</a>.</p> -->
 								<p class="date"></p>
 							</footer>
-							
 						</div>
 						<div class="bg"></div>
 						
@@ -95,16 +92,17 @@
 
 				<!-- Portfolio -->
 					<section id="portfolio" class="two">
+
 						<div class="container">
 
 							<header>
 								<h2>Portfolio</h2>
 							</header>
 
-							<p>Over years, I have worked on projects in various areas related to Mathematics, Softeware Engineering, Cloud Computing
-								and other related topics. Here are some selected ones:</p>
+							<p>Over years, I have worked on projects in various areas related to Mathematics, Machine Learning, Softeware Engineering, Cloud Computing. 
+								Here are some projects and notes:</p>
 
-							<div class="row">
+							<!-- <div class="row">
 								<div class="col-4 col-12-mobile">
 									<article class="item">
 										<a href="https://github.com/Yas2020/EKS-Istio-Multitenant" target="_blank" class="image fit"><img src="images/devops.png" alt="" /></a>
@@ -147,7 +145,37 @@
 										</header>
 									</article>
 								</div>
+							</div> -->
+							<!-- ROW 1 -->
+							<div class="row">
+								<a href="page1.html" class="bubble bubble-lg">Machine Learning</a>
+								<a href="page2.html" class="bubble bubble-md">2</a>
+								<a href="https://Yas2020.github.io/Notes/git.html" class="bubble bubble-sm">Git</a>
+								<a href="https://github.com/Yas2020/EKS-Istio-Multitenant" class="bubble bubble-lg">DevOps</a>
+							  </div>
+							<!-- ROW 2 -->
+							<div class="row">
+								<a href="page1.html" class="bubble bubble-lg">Learn NLP</a>
+								<a href="page2.html" class="bubble bubble-md">2</a>
+								<a href="page3.html" class="bubble bubble-sm">3</a>
+								<a href="page4.html" class="bubble bubble-lg">4</a>
 							</div>
+							<!-- ROW 3 -->
+							<div class="row">
+								<a href="page8.html" class="bubble">8</a>
+								<a href="page9.html" class="bubble">9</a>
+								<a href="page10.html" class="bubble">10</a>
+							</div>
+							<!-- <a href="page1.html" class="bubble">1</a>
+							<a href="page2.html" class="bubble">2</a>
+							<a href="page3.html" class="bubble">3</a>
+							<a href="page4.html" class="bubble">4</a>
+							<a href="page5.html" class="bubble">5</a>
+							<a href="page6.html" class="bubble">6</a>
+							<a href="page7.html" class="bubble">7</a>
+							<a href="page8.html" class="bubble">8</a> -->
+  <!-- <a href="page9.html" class="bubble">9</a>
+  <a href="page10.html" class="bubble">10</a> -->
 
 						</div>
 					</section>
@@ -227,8 +255,95 @@
 					month: "short",
 					day: "numeric",
 				});
-
 			</script>
+			<script>
+				const bubbles = document.querySelectorAll('.bubble');
+			
+				const colors = [
+				  'rgba(255,76,76,0.6)', 'rgba(255,153,0,0.6)', 'rgba(255,204,0,0.6)',
+				  'rgba(0,204,102,0.6)', 'rgba(0,204,204,0.6)', 'rgba(0,102,255,0.6)',
+				  'rgba(153,51,255,0.6)', 'rgba(255,51,204,0.6)', 'rgba(153,153,153,0.6)',
+				  'rgba(255,255,255,0.6)'
+				];
+			
+				bubbles.forEach((bubble, index) => {
+				// 🎨 Random Color & Gradient
+					const color = colors[Math.floor(Math.random() * colors.length)];
+					bubble.style.background = `radial-gradient(circle, ${color}, rgba(255,255,255,0.05))`;
+
+					// // 📏 Random Size
+					// const size = Math.floor(Math.random() * 40) + 60; // 60–100px
+					// bubble.style.width = size + 'px';
+					// bubble.style.height = size + 'px';
+
+					// 🌀 Random Float Direction
+					const floatDir = Math.random() > 0.5 ? 'alternate' : 'alternate-reverse';
+					bubble.style.animationDirection = floatDir;
+
+					// ⏱️ Random Animation Delay + Duration
+					const duration = Math.floor(Math.random() * 6) + 6; // 6–12s
+					const delay = Math.random() * 3; // up to 3s
+					bubble.style.animationDuration = `${duration}s`;
+					bubble.style.animationDelay = `${delay}s`;
+
+					// 🎈 Pop effect & navigate after delay
+					bubble.addEventListener('click', (e) => {
+						e.preventDefault();
+						const link = bubble.getAttribute('href');
+						bubble.classList.add('pop');
+						setTimeout(() => {
+						window.location.href = link;
+						}, 450);
+					});
+				});
+
+				const popSound = document.getElementById('pop-sound');
+
+				bubbles.forEach((bubble, index) => {
+				const color = colors[Math.floor(Math.random() * colors.length)];
+				bubble.style.background = `radial-gradient(circle, ${color}, rgba(255,255,255,0.05))`;
+				const size = Math.floor(Math.random() * 40) + 60;
+				bubble.style.width = size + 'px';
+				bubble.style.height = size + 'px';
+				bubble.style.animationDirection = Math.random() > 0.5 ? 'alternate' : 'alternate-reverse';
+				bubble.style.animationDuration = `${Math.floor(Math.random() * 6) + 6}s`;
+				bubble.style.animationDelay = `${Math.random() * 3}s`;
+
+				bubble.addEventListener('click', (e) => {
+					e.preventDefault();
+					bubble.classList.add('pop');
+					popSound.currentTime = 0;
+					popSound.play();
+					createSparkles(bubble);
+
+					const link = bubble.getAttribute('href');
+					setTimeout(() => {
+					window.location.href = link;
+					}, 600);
+				});
+				});
+
+				function createSparkles(bubble) {
+					const sparkleCount = 10;
+					for (let i = 0; i < sparkleCount; i++) {
+						const sparkle = document.createElement('div');
+						sparkle.classList.add('sparkle');
+						sparkle.style.left = `${bubble.offsetLeft + bubble.offsetWidth / 2}px`;
+						sparkle.style.top = `${bubble.offsetTop + bubble.offsetHeight / 2}px`;
+						document.body.appendChild(sparkle);
+
+						const angle = Math.random() * 2 * Math.PI;
+						const distance = Math.random() * 80 + 20;
+						const x = Math.cos(angle) * distance;
+						const y = Math.sin(angle) * distance;
+
+						sparkle.style.setProperty('--x', `${x}px`);
+						sparkle.style.setProperty('--y', `${y}px`);
+
+						setTimeout(() => sparkle.remove(), 1000);
+					}
+				}
+			  </script>
 
 	</body>
 </html>
