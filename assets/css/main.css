@@ -2598,8 +2598,9 @@ input, select, textarea {
 
 
 			#main > section.two {
-				background: url(./images/caribean.png) no-repeat center center fixed;
+				background: url(./images/caribean.png) no-repeat center center;
 				background-size: cover;
+				background-attachment: fixed;
 				display: flex;
 				flex-wrap: wrap;
 				justify-content: center;
@@ -2999,8 +3000,15 @@ input, select, textarea {
 				#footer .copyright li:first-child {
 					margin-top: 0;
 				}
-
+		/* Section Two */
+			
+			/* Disable fixed background on mobile */
+			#main > section.two {
+				background-attachment: scroll;
+			}
 	}
+
+	
 
 /* Bubbles */
 
