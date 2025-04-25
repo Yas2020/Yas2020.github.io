@@ -2605,8 +2605,12 @@ input, select, textarea {
 				flex-wrap: wrap;
 				justify-content: center;
 				align-items: center;
-				min-height: 100vh;
-      			overflow: hidden;	
+				padding: 4rem 2rem;
+				/* min-height: 100vh; */
+				max-height: 100vh;
+    			overflow-y: auto;
+      			overflow: hidden;
+				box-sizing: border-box; /* Ensures padding doesn't break layout */	
 				color: rgb(21, 70, 71)			
 			}
 
@@ -3005,6 +3009,7 @@ input, select, textarea {
 			/* Disable fixed background on mobile */
 			#main > section.two {
 				background-attachment: scroll;
+				padding: 1rem;
 			}
 	}
 
