@@ -3142,7 +3142,7 @@ input, select, textarea {
 	}
   }
 
-  /* @media screen and (max-width: 600px) {
+  @media screen and (max-width: 600px) {
 	.row:nth-child(2) { margin-left: 20px; }
 	.row:nth-child(3) { margin-left: 0px; }
 	.bubble { font-size: 12px; }
@@ -3155,49 +3155,10 @@ input, select, textarea {
   }
 
   @media (max-width: 600px) {
-	.bubble-lg { width: 1000px; height: 1000px; }
+	.bubble-lg { width: 80px; height: 80px; }
 	.bubble-md { width: 60px; height: 60px; }
 	.bubble-sm { width: 45px; height: 45px; }
-  } */
-
-  @media screen and (max-width: 600px) {
-  .row {
-    flex-direction: column;
-    gap: 50px;
-    margin-left: 0 !important;
-    align-items: center;
   }
-
-  .row:nth-child(2),
-  .row:nth-child(3) {
-    margin-left: 0;
-  }
-
-  .bubble {
-    width: 80px;
-    height: 80px;
-    font-size: 12px;
-  }
-
-  .bubble-label {
-    font-size: 12px;
-  }
-
-  .bubble-lg {
-    width: 120px; /* Adjust from 1000px */
-    height: 120px;
-  }
-
-  .bubble-md {
-    width: 60px;
-    height: 60px;
-  }
-
-  .bubble-sm {
-    width: 45px;
-    height: 45px;
-  }
-}
 
   .sparkle {
 	position: absolute;
