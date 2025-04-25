@@ -148,35 +148,44 @@
 							</div> -->
 							<!-- ROW 1 -->
 							<div class="row">
-								<a href="page1.html" class="bubble bubble-lg">Machine Learning</a>
-								<a href="page2.html" class="bubble bubble-md">2</a>
-								<a href="https://Yas2020.github.io/Notes/git.html" class="bubble bubble-sm">Git</a>
-								<a href="https://github.com/Yas2020/EKS-Istio-Multitenant" class="bubble bubble-lg">DevOps</a>
+								<a href="page1.html" class="bubble bubble-lg">
+									<span class="bubble-label">Machine Learning</span>
+								</a>
+								<a href="https://yas2020.github.io/Notes/kubernetes.html" class="bubble bubble-md">
+									<span class="bubble-label">K8s</span>
+								</a>
+								<a href="https://Yas2020.github.io/Notes/git.html" class="bubble bubble-sm">
+									<span class="bubble-label">Git</span>
+								</a>
+								<a href="https://github.com/Yas2020/EKS-Istio-Multitenant" class="bubble bubble-lg">
+									<span class="bubble-label">DevOps Project</span>
+								</a>
+								
 							  </div>
 							<!-- ROW 2 -->
 							<div class="row">
-								<a href="page1.html" class="bubble bubble-lg">Learn NLP</a>
-								<a href="page2.html" class="bubble bubble-md">2</a>
-								<a href="page3.html" class="bubble bubble-sm">3</a>
-								<a href="page4.html" class="bubble bubble-lg">4</a>
+								<a href="https://Yas2020.github.io/Notes/nlp.html" class="bubble bubble-md">
+									<span class="bubble-label">Learn <br> NLP</span>
+								</a>
+								<a href="page2.html" class="bubble bubble-sm">2</a>
+								<a href="page3.html" class="bubble bubble-lg">
+									<span class="bubble-label">GenAI</span>
+								</a>
+								<a href="page4.html" class="bubble bubble-md">4</a>
 							</div>
 							<!-- ROW 3 -->
 							<div class="row">
-								<a href="page8.html" class="bubble">8</a>
-								<a href="page9.html" class="bubble">9</a>
-								<a href="page10.html" class="bubble">10</a>
+								<a href="https://github.com/Yas2020/cicd-terraform-fastapi" class="bubble bubble-lg">
+									<span class="bubble-label">FastAPI/Django</span>
+								</a>
+								<a href="page9.html" class="bubble bubble-sm">9</a>
+								<a href="https://Yas2020.github.io/Notes/devops.html" class="bubble bubble-md">
+									<span class="bubble-label">Learn <br> DevOps</span>
+								</a>
+								<a href="https://github.com/Yas2020/add-bdd-final-project" class="bubble bubble-lg">
+									<span class="bubble-label">Application<br>Security &<br> Testing</span>
+								</a>
 							</div>
-							<!-- <a href="page1.html" class="bubble">1</a>
-							<a href="page2.html" class="bubble">2</a>
-							<a href="page3.html" class="bubble">3</a>
-							<a href="page4.html" class="bubble">4</a>
-							<a href="page5.html" class="bubble">5</a>
-							<a href="page6.html" class="bubble">6</a>
-							<a href="page7.html" class="bubble">7</a>
-							<a href="page8.html" class="bubble">8</a> -->
-  <!-- <a href="page9.html" class="bubble">9</a>
-  <a href="page10.html" class="bubble">10</a> -->
-
 						</div>
 					</section>
 
@@ -190,15 +199,19 @@
 
 							<a href="#" class="image featured"><img src="images/aboutMe.jpg" alt="" /></a>
 
-							<p>I am interested in Mathematics and its applications including Data Science and Machine Learning. 
-								I have also worked on some selected projects involving DevOps to better understand deployment of software 
-								in the cloud. rew2345fc2m;fmr2';m1 12;oidno3;4nd ;oi4dnmo3;2nd
-								12l3kdmn31c primnvorgntrielgn erttnvlreo o;irentvo;ient
-								34fnr4lfnreglkjnv .ltgvngl l.englv lenwlnr l.jnecrnc lnretvlnrn
-								34lnrv;o rentvoer; ;oiet'kq'k qnw;o o;irentvo;ne
+							<p>
+								I'm a mathematician by training, with a PhD in mathematics and a deep love for problem-solving, abstraction, and discovering patterns in complexity. 
+								My passion for continuous learning has naturally led me into the world of software engineering, machine learning, and technology — where theory meets 
+								real-world applications with profund impact on our daily life.
 
-								453f4tct tevklmtnvert.l
-								reljtnvlentl ;elnrtvo;en el;nwqewl;n ;3orinov;int liurntvtr
+								I’m driven by curiosity and the desire to understand how things work, whether it’s optimizing algorithms, exploring data, or building systems that scale. 
+								I thrive at the intersection of mathematical thinking and practical innovation, and I’m always exploring new tools, languages, and frameworks to grow and 
+								adapt in a fast-moving tech landscape.
+
+								I’m passionate about gardening and I find working with nature incredibly grounding. I also enjoy 
+								biking, whether it’s for a breath of fresh air or just to clear my head and think through complex problems.
+
+								
 							</p>
 
 						</div>
@@ -256,94 +269,200 @@
 					day: "numeric",
 				});
 			</script>
+
 			<script>
+
+				function syncTransform(bubble) {
+					const p = bubble.dataset.parallax || "translate(0px, 0px)";
+					const s = bubble.dataset.scale || "scale(1)";
+					bubble.style.transform = `${p} ${s}`;
+				}
+
+				
 				const bubbles = document.querySelectorAll('.bubble');
-			
-				const colors = [
-				  'rgba(255,76,76,0.6)', 'rgba(255,153,0,0.6)', 'rgba(255,204,0,0.6)',
-				  'rgba(0,204,102,0.6)', 'rgba(0,204,204,0.6)', 'rgba(0,102,255,0.6)',
-				  'rgba(153,51,255,0.6)', 'rgba(255,51,204,0.6)', 'rgba(153,153,153,0.6)',
-				  'rgba(255,255,255,0.6)'
-				];
-			
-				bubbles.forEach((bubble, index) => {
-				// 🎨 Random Color & Gradient
-					const color = colors[Math.floor(Math.random() * colors.length)];
-					bubble.style.background = `radial-gradient(circle, ${color}, rgba(255,255,255,0.05))`;
-
-					// // 📏 Random Size
-					// const size = Math.floor(Math.random() * 40) + 60; // 60–100px
-					// bubble.style.width = size + 'px';
-					// bubble.style.height = size + 'px';
-
-					// 🌀 Random Float Direction
-					const floatDir = Math.random() > 0.5 ? 'alternate' : 'alternate-reverse';
-					bubble.style.animationDirection = floatDir;
-
-					// ⏱️ Random Animation Delay + Duration
-					const duration = Math.floor(Math.random() * 6) + 6; // 6–12s
-					const delay = Math.random() * 3; // up to 3s
-					bubble.style.animationDuration = `${duration}s`;
-					bubble.style.animationDelay = `${delay}s`;
-
-					// 🎈 Pop effect & navigate after delay
-					bubble.addEventListener('click', (e) => {
-						e.preventDefault();
-						const link = bubble.getAttribute('href');
-						bubble.classList.add('pop');
-						setTimeout(() => {
-						window.location.href = link;
-						}, 450);
-					});
-				});
-
 				const popSound = document.getElementById('pop-sound');
 
-				bubbles.forEach((bubble, index) => {
-				const color = colors[Math.floor(Math.random() * colors.length)];
-				bubble.style.background = `radial-gradient(circle, ${color}, rgba(255,255,255,0.05))`;
-				const size = Math.floor(Math.random() * 40) + 60;
-				bubble.style.width = size + 'px';
-				bubble.style.height = size + 'px';
-				bubble.style.animationDirection = Math.random() > 0.5 ? 'alternate' : 'alternate-reverse';
-				bubble.style.animationDuration = `${Math.floor(Math.random() * 6) + 6}s`;
-				bubble.style.animationDelay = `${Math.random() * 3}s`;
+				function shuffle(array) {
+					return array.sort(() => Math.random() - 0.5);
+				}
+			  
+				let colorPool = shuffle([
+					'255,76,76',     // red
+					'255,153,0',     // orange
+					'0,204,102',     // green
+					'0,102,255',     // blue
+					'153,51,255',    // purple
+					'255,255,102',   // yellow
+					'255,51,153',    // pink
+					'51,255,255',    // cyan
+					'102,255,102',   // mint
+					'255,102,204',   // hot pink
+					'204,102,255',   // violet
+					'255,204,102',   // peach
+					'102,153,255',   // sky blue
+					'102,255,178',   // seafoam
+					'255,102,102'    // coral
+					]);
+				
+				let colorIndex = 0;
+			  
+				bubbles.forEach((bubble) => {
 
-				bubble.addEventListener('click', (e) => {
-					e.preventDefault();
-					bubble.classList.add('pop');
-					popSound.currentTime = 0;
-					popSound.play();
-					createSparkles(bubble);
+					if (colorIndex >= colorPool.length) {
+						colorPool = shuffle(colorPool); // Reshuffle if all used
+						colorIndex = 0;
+					}
+				  	// 🌈 Random Color Gradient
+					const baseColor = colorPool[colorIndex++];
+					bubble.dataset.color = baseColor; // Save for sparkles
+					const gradient = `radial-gradient(circle, 
+						rgba(255, 255, 255, 0.05) 0%, 
+						rgba(${baseColor}, 0.2) 60%, 
+						rgba(${baseColor}, 0.4) 100%)`;
 
-					const link = bubble.getAttribute('href');
-					setTimeout(() => {
-					window.location.href = link;
-					}, 600);
+					bubble.style.background = `radial-gradient(circle,
+						rgba(255, 255, 255, 0.05) 0%,
+						rgba(${baseColor}, 0.2) 60%,
+						rgba(${baseColor}, 0.4) 100%)`;
+					
+					bubble.dataset.parallax = "translate(0px, 0px)";
+					bubble.dataset.scale = "scale(1)";
+
+					// bubble.style.transform = `translate(${x}px, ${y}px) scale(1.1)`;
+					
+			  
+					// 🌀 Float Direction, Duration, Delay
+					bubble.style.animationDirection = Math.random() > 0.5 ? 'alternate' : 'alternate-reverse';
+					bubble.style.animationDuration = `${Math.floor(Math.random() * 6) + 6}s`;
+					bubble.style.animationDelay = `${Math.random() * 3}s`;
+				
+					// 🎈 Pop click handler
+					bubble.addEventListener('click', (e) => {
+						e.preventDefault();
+						e.stopPropagation();
+						e.stopImmediatePropagation();
+				
+						bubble.classList.add('pop');
+				
+						if (popSound) {
+						popSound.currentTime = 0;
+						popSound.play();
+						}
+			  
+					
+						createSparkles(bubble);
+
+						// 📦 Add scale effect 
+						bubble.dataset.scale = "scale(1.2)";
+						syncTransform(bubble);
+
+						setTimeout(() => {
+							bubble.dataset.scale = "scale(1)";
+							syncTransform(bubble);
+						}, 600);
+			  
+						const link = bubble.getAttribute('href');
+					
+						if (!link) return;
+			  
+						const delay = 600; // Consistent delay for pop/sparkles
+			  
+						if (bubble.classList.contains('bubble-lg')) {
+							setTimeout(() => {
+								bubble.classList.remove('pop');
+								window.open(link, '_blank', 'noopener,noreferrer').focus();
+								
+							}, delay);
+						} else if (bubble.classList.contains('bubble-sm')) {
+							setTimeout(() => {
+								window.location.href = link;
+							}, delay);
+						} else{
+							setTimeout(() => {
+								window.location.href = link;
+							}, delay);
+						}
+				  	});
 				});
-				});
 
+			  
+				// ✨ Sparkle function
 				function createSparkles(bubble) {
-					const sparkleCount = 10;
+					console.log("Creating sparkles...");
+					const sparkleCount = 12;
+					// const originalColor = window.getComputedStyle(bubble).backgroundColor;
+					const baseColor = bubble.dataset.color || '255,255,255';
+					const sparkleColor = lightenRGB(`rgb(${baseColor})`, 1.6);
+					// const color = window.getComputedStyle(bubble).backgroundColor;
+
+
 					for (let i = 0; i < sparkleCount; i++) {
-						const sparkle = document.createElement('div');
-						sparkle.classList.add('sparkle');
-						sparkle.style.left = `${bubble.offsetLeft + bubble.offsetWidth / 2}px`;
-						sparkle.style.top = `${bubble.offsetTop + bubble.offsetHeight / 2}px`;
+						const sparkle = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+						sparkle.setAttribute("class", "svg-sparkle");
+						sparkle.setAttribute("width", "12");
+						sparkle.setAttribute("height", "12");
+						
+						sparkle.innerHTML = `
+							<circle cx="6" cy="6" r="3" fill="${sparkleColor}" opacity="1" />
+							`;
+
+						// Position sparkle at center of bubble
+						const bubbleRect = bubble.getBoundingClientRect();
+						sparkle.style.position = "absolute";
+						sparkle.style.left = `${bubbleRect.left + bubbleRect.width / 2 + window.scrollX}px`;
+						sparkle.style.top = `${bubbleRect.top + bubbleRect.height / 2 + window.scrollY}px`;
+
+						sparkle.style.pointerEvents = "none";
+
 						document.body.appendChild(sparkle);
 
+						// Animate explosion outward
 						const angle = Math.random() * 2 * Math.PI;
 						const distance = Math.random() * 80 + 20;
 						const x = Math.cos(angle) * distance;
 						const y = Math.sin(angle) * distance;
 
-						sparkle.style.setProperty('--x', `${x}px`);
-						sparkle.style.setProperty('--y', `${y}px`);
+						sparkle.animate(
+						[
+							{ transform: "translate(0, 0)", opacity: 1 },
+							{ transform: `translate(${x}px, ${y}px) scale(0.5)`, opacity: 0 }
+						],
+						{
+							duration: 800,
+							easing: "ease-out"
+						}
+						);
 
-						setTimeout(() => sparkle.remove(), 1000);
+						setTimeout(() => sparkle.remove(), 800);
 					}
 				}
+				function lightenRGB(rgb, factor = 1.3) {
+					const match = rgb.match(/\d+/g);
+					if (!match) return 'white';
+					const [r, g, b] = match.map(n => Math.min(255, Math.floor(Number(n) * factor)));
+					return `rgb(${r}, ${g}, ${b})`;
+				}
+
+				function triggerRandomBlinking() {
+					bubbles.forEach((bubble) => {
+						if (Math.random() < 0.15) { // 10% chance to blink each cycle
+							bubble.classList.add('blinking');
+							setTimeout(() => {
+								bubble.classList.remove('blinking');
+							}, 300); // Match the duration of the blink animation
+						}
+					});
+
+					// Run again after a random interval
+					const nextBlink = Math.random() * 3000 + 2000; // 2s - 5s
+					setTimeout(triggerRandomBlinking, nextBlink);
+				}
+
+				// Start the blinking loop
+				triggerRandomBlinking();
 			  </script>
+			  
+		
 
 	</body>
 </html>
