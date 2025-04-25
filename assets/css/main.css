@@ -514,7 +514,7 @@ input, select, textarea {
 					padding-top: 80px;
 				}
 
-		@media screen and (min-width: 961px) and (max-width: 1880px) {
+		/* @media screen and (min-width: 961px) and (max-width: 1880px) {
 
 			.row {
 				display: flex;
@@ -757,9 +757,9 @@ input, select, textarea {
 							padding-top: 80px;
 						}
 
-		}
+		} */
 
-		@media screen and (min-width: 961px) and (max-width: 1620px) {
+		/* @media screen and (min-width: 961px) and (max-width: 1620px) {
 
 			.row {
 				display: flex;
@@ -1002,9 +1002,9 @@ input, select, textarea {
 							padding-top: 80px;
 						}
 
-		}
+		} */
 
-		@media screen and (min-width: 961px) and (max-width: 1320px) {
+		/* @media screen and (min-width: 961px) and (max-width: 1320px) {
 
 			.row {
 				display: flex;
@@ -1492,9 +1492,9 @@ input, select, textarea {
 							padding-top: 40px;
 						}
 
-		}
+		} */
 
-		@media screen and (max-width: 736px) {
+		/* @media screen and (max-width: 736px) {
 
 			.row {
 				display: flex;
@@ -1737,7 +1737,7 @@ input, select, textarea {
 							padding-top: 40px;
 						}
 
-		}
+		} */
 
 /* Sections/Article */
 
@@ -1867,7 +1867,7 @@ input, select, textarea {
 	form select,
 	form textarea {
 		position: relative;
-		/* -webkit-appearance: none; */
+		-webkit-appearance: none;
 		display: block;
 		border: 0;
 		outline: 0;
@@ -2606,9 +2606,7 @@ input, select, textarea {
 				justify-content: center;
 				align-items: center;
 				padding: 4rem 2rem;
-				min-height: 100vh;
-				max-height: 100vh;
-    			overflow-y: auto;
+				/* min-height: 100vh; */
       			overflow: hidden;
 				box-sizing: border-box; /* Ensures padding doesn't break layout */	
 				color: rgb(21, 70, 71)			
@@ -3155,7 +3153,7 @@ input, select, textarea {
   }
 
   @media (max-width: 600px) {
-	.bubble-lg { width: 80px; height: 80px; }
+	.bubble-lg { width: 1000px; height: 1000px; }
 	.bubble-md { width: 60px; height: 60px; }
 	.bubble-sm { width: 45px; height: 45px; }
   }
