@@ -514,7 +514,7 @@ input, select, textarea {
 					padding-top: 80px;
 				}
 
-		/* @media screen and (min-width: 961px) and (max-width: 1880px) {
+		@media screen and (min-width: 961px) and (max-width: 1880px) {
 
 			.row {
 				display: flex;
@@ -757,9 +757,9 @@ input, select, textarea {
 							padding-top: 80px;
 						}
 
-		} */
+		}
 
-		/* @media screen and (min-width: 961px) and (max-width: 1620px) {
+		@media screen and (min-width: 961px) and (max-width: 1620px) {
 
 			.row {
 				display: flex;
@@ -1002,9 +1002,9 @@ input, select, textarea {
 							padding-top: 80px;
 						}
 
-		} */
+		}
 
-		/* @media screen and (min-width: 961px) and (max-width: 1320px) {
+		@media screen and (min-width: 961px) and (max-width: 1320px) {
 
 			.row {
 				display: flex;
@@ -1492,9 +1492,9 @@ input, select, textarea {
 							padding-top: 40px;
 						}
 
-		} */
+		}
 
-		/* @media screen and (max-width: 736px) {
+		@media screen and (max-width: 736px) {
 
 			.row {
 				display: flex;
@@ -1737,7 +1737,7 @@ input, select, textarea {
 							padding-top: 40px;
 						}
 
-		} */
+		}
 
 /* Sections/Article */
 
@@ -1867,7 +1867,7 @@ input, select, textarea {
 	form select,
 	form textarea {
 		position: relative;
-		-webkit-appearance: none;
+		/* -webkit-appearance: none; */
 		display: block;
 		border: 0;
 		outline: 0;
@@ -2609,7 +2609,8 @@ input, select, textarea {
 				/* min-height: 100vh; */
 				max-height: 100vh;
     			overflow-y: auto;
-      			overflow: hidden;
+				overflow: visible;
+      			/* overflow: hidden; */
 				box-sizing: border-box; /* Ensures padding doesn't break layout */	
 				color: rgb(21, 70, 71)			
 			}
@@ -3017,6 +3018,10 @@ input, select, textarea {
 
 /* Bubbles */
 
+.row, .bubble {
+	border: 1px dashed rgb(243, 9, 9);
+  }
+
 .row {
 	display: flex;
 	justify-content: center;
@@ -3142,7 +3147,7 @@ input, select, textarea {
 	}
   }
 
-  @media screen and (max-width: 600px) {
+  /* @media screen and (max-width: 600px) {
 	.row:nth-child(2) { margin-left: 20px; }
 	.row:nth-child(3) { margin-left: 0px; }
 	.bubble { font-size: 12px; }
@@ -3158,8 +3163,47 @@ input, select, textarea {
 	.bubble-lg { width: 1000px; height: 1000px; }
 	.bubble-md { width: 60px; height: 60px; }
 	.bubble-sm { width: 45px; height: 45px; }
-  }
+  } */
 
+  @media screen and (max-width: 600px) {
+	.row {
+	  flex-direction: column;
+	  gap: 50px;
+	  margin-left: 0 !important;
+	  align-items: center;
+	}
+  
+	.row:nth-child(2),
+	.row:nth-child(3) {
+	  margin-left: 0;
+	}
+  
+	.bubble {
+	  width: 80px;
+	  height: 80px;
+	  font-size: 12px;
+	}
+  
+	.bubble-label {
+	  font-size: 12px;
+	}
+  
+	.bubble-lg {
+	  width: 120px; /* Adjust from 1000px */
+	  height: 120px;
+	}
+  
+	.bubble-md {
+	  width: 60px;
+	  height: 60px;
+	}
+  
+	.bubble-sm {
+	  width: 45px;
+	  height: 45px;
+	}
+  }
+  
   .sparkle {
 	position: absolute;
 	width: 6px;
