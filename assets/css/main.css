@@ -272,7 +272,7 @@ input, select, textarea {
 		}
 
 /* Row */
-
+/* 
 	.row {
 		display: flex;
 		flex-wrap: wrap;
@@ -1737,7 +1737,7 @@ input, select, textarea {
 							padding-top: 40px;
 						}
 
-		}
+		} */
 
 /* Sections/Article */
 
@@ -2596,49 +2596,51 @@ input, select, textarea {
 					opacity: 0;
 				}
 
+	/* Section Two */
+		#main > section.two {
+			background: url(./images/caribean.png) no-repeat center center;
+			background-size: cover;
+			background-attachment: fixed;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			padding: 4rem 2rem;
+			/* min-height: 100vh; */
+			/* max-height: 100vh; */
+			overflow-y: auto;
+			overflow: visible;
+			/* overflow: hidden; */
+			box-sizing: border-box; /* Ensures padding doesn't break layout */	
+			color: rgb(21, 70, 71)			
+		}
 
-			#main > section.two {
-				background: url(./images/caribean.png) no-repeat center center;
-				background-size: cover;
-				background-attachment: fixed;
-				display: flex;
-				flex-wrap: wrap;
-				justify-content: center;
-				align-items: center;
-				padding: 4rem 2rem;
-				/* min-height: 100vh; */
-				max-height: 100vh;
-    			overflow-y: auto;
-				overflow: visible;
-      			/* overflow: hidden; */
-				box-sizing: border-box; /* Ensures padding doesn't break layout */	
-				color: rgb(21, 70, 71)			
+			#main > section.two p {
+				font-weight: 400;
+				color: rgb(13, 44, 44);
+				margin: -30px 0px 80px 0px;	
+			} 
+			#main > section.two h2 {
+				font-weight: 350;
+				color: inherit
 			}
+			
+    /* Section Three */
+		#main > section.three {
+			background-color: #ecf1f1;
+		}
 
-				#main > section.two p {
-					font-weight: 400;
-					color: rgb(13, 44, 44);
-					margin: -30px 0px 80px 0px;	
-				} 
-				#main > section.two h2 {
-					font-weight: 350;
-					color: inherit
-				}
+			#main > section.three p {
+				/* font-weight: 400; */
+				/* color: rgb(13, 44, 44); */
+				/* margin: -30px 0px 80px 0px;	 */
+				text-align: justify;
+			} 
 
-			#main > section.three {
-				background-color: #ecf1f1;
-			}
-
-				#main > section.three p {
-					/* font-weight: 400; */
-					/* color: rgb(13, 44, 44); */
-					/* margin: -30px 0px 80px 0px;	 */
-					text-align: justify;
-				} 
-
-			#main > section.four {
-				background-color: #e8edec;
-			}
+    /* Section Four */
+		#main > section.four {
+			background-color: #e8edec;
+		}
 
 /* Wide */
 
@@ -3166,31 +3168,19 @@ input, select, textarea {
   } */
 
   @media screen and (max-width: 600px) {
-	.row {
-	  flex-direction: column;
-	  gap: 50px;
-	  margin-left: 0 !important;
-	  align-items: center;
-	}
-  
-	.row:nth-child(2),
-	.row:nth-child(3) {
-	  margin-left: 0;
-	}
-  
 	.bubble {
-	  width: 80px;
-	  height: 80px;
+	  width: 60px;
+	  height: 60px;
 	  font-size: 12px;
 	}
   
 	.bubble-label {
-	  font-size: 12px;
+	  font-size: 10px;
 	}
   
 	.bubble-lg {
-	  width: 120px; /* Adjust from 1000px */
-	  height: 120px;
+	  width: 80px;
+	  height: 80px;
 	}
   
 	.bubble-md {
@@ -3201,6 +3191,12 @@ input, select, textarea {
 	.bubble-sm {
 	  width: 45px;
 	  height: 45px;
+	}
+  
+	.row {
+	  gap: 20px;
+	  justify-content: center;
+	  flex-wrap: wrap;
 	}
   }
   
