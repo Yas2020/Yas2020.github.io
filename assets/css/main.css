@@ -2606,10 +2606,10 @@ input, select, textarea {
 				justify-content: center;
 				align-items: center;
 				padding: 4rem 2rem;
-				/* min-height: 100vh; */
+				min-height: 100vh;
 				max-height: 100vh;
     			overflow-y: auto;
-      			/* overflow: hidden; */
+      			overflow: hidden;
 				box-sizing: border-box; /* Ensures padding doesn't break layout */	
 				color: rgb(21, 70, 71)			
 			}
