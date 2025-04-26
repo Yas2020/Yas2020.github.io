@@ -906,6 +906,7 @@ input, select, textarea {
 
 	/* Header Section One */
 
+
 		#main > section.one .header {
 			display: -moz-flex;
 			display: -webkit-flex;
@@ -1053,6 +1054,8 @@ input, select, textarea {
 						padding-bottom: 0;
 						opacity: 0;
 					}
+					
+	
 		
 				@media screen and (max-width: 980px) {
 		
@@ -1063,6 +1066,7 @@ input, select, textarea {
 				}
 		
 				@media screen and (max-width: 736px) {
+					
 		
 					#main > section.one .header > * {
 						margin-top: 2rem;
@@ -1147,25 +1151,26 @@ input, select, textarea {
 					color: inherit
 				}
 
-				#main > section.one #footerDate {
-					-moz-transition: -moz-transform 0.325s ease-in-out, -moz-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
-					-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
-					-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
-					transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
-					width: 100%;
-					max-width: 100%;
-					margin-top: 1rem;
-					text-align: center;
+			#main > section.one #footerDate {
+				-moz-transition: -moz-transform 0.325s ease-in-out, -moz-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
+				-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
+				-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
+				transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
+				width: 100%;
+				max-width: 100%;
+				margin-top: 5rem;
+				text-align: center;
+				
+			}
+
+				#main > section.one #footerDate .date {
+					color: #fff;
+					letter-spacing: 0.2rem;
+					font-size: 0.6rem;
+					opacity: 0.75;
+					margin-bottom: 5rem;
+					text-transform: uppercase;
 				}
-	
-					#main > section.one #footerDate .date {
-						color: #fff;
-						letter-spacing: 0.2rem;
-						font-size: 0.6rem;
-						opacity: 0.75;
-						margin-bottom: 0;
-						text-transform: uppercase;
-					}
 
 			#main > section.three {
 				background-color: #ecf1f1;
@@ -1176,6 +1181,7 @@ input, select, textarea {
 					/* color: rgb(13, 44, 44); */
 					/* margin: -30px 0px 80px 0px;	 */
 					text-align: justify;
+					padding: 20px
 				}
 				
 				  
@@ -1185,7 +1191,7 @@ input, select, textarea {
 					height: auto;
 					display: block;
 					box-sizing: border-box;
-					padding: 0px 0px 20px 0px
+					padding: 20px
 				  }
 
 
@@ -1581,16 +1587,9 @@ input, select, textarea {
 
 	@media screen and (max-width: 480px) {
 
-		/* Basic */
 
 			body, input, textarea, select {
 				font-size: 14pt;
-			}
-
-			h2 {
-				font-size: 1.5em;
-				letter-spacing: 0;
-				font-weight: 300;
 			}
 
 			.container {
@@ -1631,21 +1630,12 @@ input, select, textarea {
 				#footer .copyright li:first-child {
 					margin-top: 0;
 				}
-		/* Section Two */
-			
-			#main > section.two h2 {
-				font-size: 1.5rem;
-				padding: 10px 0px;
-				font-weight: 400;
-				/* color:red; */
-			}
+		/* Section One */
 
-			#main > section.two p {
-				font-size: 1rem;
-				padding: 0 0 0px 0;
-				margin: -40px 0 0px 0;
-				line-height: 1.5;
-			}
+			/* #main .one .header {
+				padding: ;
+			} */
+		
 
 			.bubble {
 				display: flex;
@@ -1658,24 +1648,7 @@ input, select, textarea {
 
 			}
 		
-			span.bubble-label {
-				font-size: .6rem;
-			}
 		
-			.bubble-grid {
-				display: grid;
-				/* overflow-x: hidden; */
-				grid-template-columns: 20% 20% 30%;
-				grid-template-areas:
-				  "a b c"
-				  "d e f";
-				/* gap: 5px; */
-				/* padding: 0 0; */
-				margin: 15px 0 5px !important;
-				/* box-sizing: border-box; */
-				/* justify-items: center; */
-				/* align-items: center; */
-			}
 			.bubble.bubble-sm {
 				width: 25px;
 				height: 25px;
