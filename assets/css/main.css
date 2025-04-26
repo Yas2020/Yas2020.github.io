@@ -20,7 +20,7 @@ footer, header, hgroup, menu, nav, output, ruby,
 section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 1;
+	border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;}
@@ -99,7 +99,7 @@ input, select, textarea {
 		font-family: 'Source Sans Pro', sans-serif;
 		font-size: 19pt;
 		font-weight: 300;
-		/* line-height: 1.75em; */
+		line-height: 1.75em;
 		color: #888;
 	}
 
@@ -883,14 +883,6 @@ input, select, textarea {
 	
 				#main > section.one .container {
 					padding: 3rem 2rem;
-				}
-	
-			}
-
-			@media screen and (max-width: 961px) {
-	
-				#main > section.one .bg:before {
-					position: relative;
 				}
 	
 			}
