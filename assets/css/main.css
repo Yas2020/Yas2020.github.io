@@ -1141,6 +1141,7 @@ input, select, textarea {
 				width: 100%;
 				max-width: 100%;
 				margin-top: 0rem;
+				/* padding-bottom: 8rem; */
 				text-align: center;
 				
 			}
@@ -1464,7 +1465,7 @@ input, select, textarea {
 				margin-left: 0;
 			}
 
-			#main > section.one #footerdate {
+			#footerdate {
 				padding-bottom: 10rem;
 			}
 
