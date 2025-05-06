@@ -843,7 +843,7 @@ input, select, textarea {
 				-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
 				transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
 				background-image: url("images/bg.jpg");
-				background-position: center;
+				/* background-position: center; */
 				background-size: cover;
 				background-repeat: no-repeat;
 				z-index: 1;
@@ -1115,6 +1115,8 @@ input, select, textarea {
 			#main > section.two {
 				background: url(./images/caribean.png);
 				background-size: cover;
+				filter: saturation(.7);
+				filter: brightness(.9);
 				/* background-position: center; */
 				min-height: 100vh;
 				color: rgb(21, 70, 71)			
@@ -1313,9 +1315,9 @@ input, select, textarea {
 				display: none;
 			}
 
-			.container {
+			/* .container {
 				padding: 0 2em 0 2em;
-			}
+			} */
 
 		/* Item */
 
@@ -1466,7 +1468,7 @@ input, select, textarea {
 			}
 
 			#footerDate {
-				padding-bottom: 10rem;
+				padding-bottom: 8rem;
 			}
 
 		/* Main */
@@ -1557,14 +1559,14 @@ input, select, textarea {
     text-align: center;
     padding: 30px;
     border-radius: 50%;
-    background-color: #3498db;
+    /* background-color: #3498db; */
     /* color: white; */
     text-decoration: none;
     /* font-size: 1.2rem; */
     position: relative;
 	overflow: visible;
 	cursor: pointer;
-	/* backdrop-filter: blur(1.25em); */
+	backdrop-filter: blur(1.2rem);
 	background: radial-gradient(circle, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03));
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease-out;
@@ -1634,8 +1636,8 @@ input, select, textarea {
   }
   
   .bubble-lg {
-	width: 150px !important;
-  	height: 150px !important;
+	width: 120px !important;
+  	height: 120px !important;
   }
 
   @keyframes float {
