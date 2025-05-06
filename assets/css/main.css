@@ -1115,8 +1115,6 @@ input, select, textarea {
 			#main > section.two {
 				background: url(./images/caribean.png);
 				background-size: cover;
-				filter: saturation(.7);
-				filter: brightness(.9);
 				/* background-position: center; */
 				min-height: 100vh;
 				color: rgb(21, 70, 71)			
@@ -1315,9 +1313,13 @@ input, select, textarea {
 				display: none;
 			}
 
-			/* .container {
-				padding: 0 2em 0 2em;
-			} */
+			#main > section.three .container {
+				padding: 0, 0.5rem
+			}
+
+			#main > section.three .container p {
+				font-size: 14pt;
+			}
 
 		/* Item */
 
