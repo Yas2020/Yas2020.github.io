@@ -495,54 +495,54 @@
 					descPopup.classList.remove('show');
 				});
 
-				let longPressTimer = null;
+				// let longPressTimer = null;
 
 				// Touch support (mobile long-press)
-				bubbles.forEach(bubble => {
-					bubble.addEventListener('touchstart', (e) => {
-						// Start long press timer (e.g. 600ms)
-						longPressTimer = setTimeout(() => {
-							const desc = bubble.dataset.desc;
-							descContent.textContent = desc;
+				// bubbles.forEach(bubble => {
+				// 	bubble.addEventListener('touchstart', (e) => {
+				// 		// Start long press timer (e.g. 600ms)
+				// 		longPressTimer = setTimeout(() => {
+				// 			const desc = bubble.dataset.desc;
+				// 			descContent.textContent = desc;
 
-							const rect = bubble.getBoundingClientRect();
-							const popupWidth = 280;
-							let left = rect.left + rect.width / 2 - popupWidth / 2;
-							left = Math.max(10, Math.min(left, window.innerWidth - popupWidth - 10));
-							const top = rect.bottom + 15;
+				// 			const rect = bubble.getBoundingClientRect();
+				// 			const popupWidth = 280;
+				// 			let left = rect.left + rect.width / 2 - popupWidth / 2;
+				// 			left = Math.max(10, Math.min(left, window.innerWidth - popupWidth - 10));
+				// 			const top = rect.bottom + 15;
 
-							descPopup.style.left = left + 'px';
-							descPopup.style.top = top + 'px';
-							descPopup.classList.add('show');
-							descPopup.setAttribute('aria-hidden', 'false');
+				// 			descPopup.style.left = left + 'px';
+				// 			descPopup.style.top = top + 'px';
+				// 			descPopup.classList.add('show');
+				// 			descPopup.setAttribute('aria-hidden', 'false');
 
-							// Typing effect:
-							typeText(descContent, desc);
-						}, 600); // time to trigger long press
-					});
+				// 			// Typing effect:
+				// 			typeText(descContent, desc);
+				// 		}, 600); // time to trigger long press
+				// 	});
 
-					bubble.addEventListener('touchend', (e) => {
-						// Cancel timer if released early
-						clearTimeout(longPressTimer);
+				// 	bubble.addEventListener('touchend', (e) => {
+				// 		// Cancel timer if released early
+				// 		clearTimeout(longPressTimer);
 
-						// If popup is visible, don't redirect
-						if (descPopup.classList.contains('show')) {
-						// Hide after short delay
-						setTimeout(() => {
-							descPopup.classList.remove('show');
-							descPopup.setAttribute('aria-hidden', 'true');
-							descContent.textContent = "";
-      						if (typingTimeoutId) clearTimeout(typingTimeoutId);
-						}, 1200);
-						e.preventDefault(); // prevent tap from redirecting
-						}
-					});
+				// 		// If popup is visible, don't redirect
+				// 		if (descPopup.classList.contains('show')) {
+				// 		// Hide after short delay
+				// 		setTimeout(() => {
+				// 			descPopup.classList.remove('show');
+				// 			descPopup.setAttribute('aria-hidden', 'true');
+				// 			descContent.textContent = "";
+      			// 			if (typingTimeoutId) clearTimeout(typingTimeoutId);
+				// 		}, 1200);
+				// 		e.preventDefault(); // prevent tap from redirecting
+				// 		}
+				// 	});
 
-					// Optional: cancel on scroll/move
-					bubble.addEventListener('touchmove', () => {
-						clearTimeout(longPressTimer);
-					});
-				});
+				// 	// Optional: cancel on scroll/move
+				// 	bubble.addEventListener('touchmove', () => {
+				// 		clearTimeout(longPressTimer);
+				// 	});
+				// });
 			</script>
 			  
 		
