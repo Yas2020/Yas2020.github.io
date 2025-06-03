@@ -1172,7 +1172,8 @@ input, select, textarea {
 					/* color: rgb(13, 44, 44); */
 					/* margin: -30px 0px 80px 0px;	 */
 					text-align: justify;
-					padding: 20px;
+					padding: 20px 20px 0px;
+					margin: 0px;
 				}
 				
 				  
@@ -1631,6 +1632,37 @@ input, select, textarea {
 	transition: opacity 0.3s ease, filter 0.3s ease;
   }
 
+  
+   /* Popup styling */
+  #desc-popup {
+    position: fixed;
+    max-width: 280px;
+    padding: 10px 12px;
+    background: rgba(186, 192, 174, 0.95);
+    color: rgba(114, 2, 2, 0.679);
+    font-size: 14px;
+	line-height: 1.1;
+    font-weight: 500;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    display: none;
+	opacity: .9;
+	
+  }
+  #desc-popup.show {
+    display: block;
+  }
+  #desc-popup .close-btn {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    color: #888;
+    display: none; /* no close btn needed on desktop hover popup */
+  }
+
   .bubble.pop {
 	animation: pop-out 0.6s ease forwards !important;
   }
@@ -1671,6 +1703,19 @@ input, select, textarea {
 	  opacity: 0;
 	}
   }
+
+  .blinking-cursor {
+  display: inline-block;
+  font-weight: bold;
+  color: #f10e0e;
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
 
   /* @media screen and (max-width: 600px) {
 	.row:nth-child(2) { margin-left: 20px; }
