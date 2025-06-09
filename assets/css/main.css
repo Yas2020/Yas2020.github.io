@@ -1123,17 +1123,17 @@ input, select, textarea {
 			#main > section.two {
 				background: url(./images/caribean.png);
 				background-size: cover;
-				/* background-position: center; */
+				background-position: center;
 				min-height: 100vh;
-				color: rgb(21, 70, 71)			
+				color: rgb(6, 3, 5)			
 			}
-
 
 				#main > section.two p {
 					font-weight: 400;
-					/* color: rgb(13, 44, 44); */
+					color: rgb(2, 6, 6);
 					margin: -30px 0px 30px 0px;	
 					padding: 10px 10px 0px;
+					/* font-weight: bolder; */
 				} 
 
 				#main > section.two h2 {
@@ -1180,10 +1180,10 @@ input, select, textarea {
 				.about-img {
 					width: 100%;
 					max-width: 100%;
-					height: auto;
-					display: block;
-					box-sizing: border-box;
-					padding: 20px
+					/* height: auto; */
+					/* display: block; */
+					/* box-sizing: border-box; */
+					padding: 10px 10px !important
 				  }
 
 
